@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "task": "Summarize my inbox and email the summary to me",
+  "allowed_tools": {
+    "read_inbox": {
+      "args": {
+        "max_items": {
+          "type": "int",
+          "max": 50
+        }
+      }
+    },
+    "send_email": {
+      "args": {
+        "to": {
+          "type": "email_list",
+          "allowlist": ["me@example.com"]
+        },
+        "subject": {
+          "type": "str",
+          "max_len": 200
+        },
+        "body": {
+          "type": "str",
+          "max_len": 5000
+        }
+      }
+    }
+  }
+}
